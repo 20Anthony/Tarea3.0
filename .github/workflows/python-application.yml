@@ -51,11 +51,11 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    # 8. Construir y Publicar la imagen Docker
+# 8. Construir y Publicar la imagen Docker
     - name: Construir y Publicar imagen Docker
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/ejercicio:3.0.0
+          ghcr.io/20anthony/ejercicio:3.0.0
