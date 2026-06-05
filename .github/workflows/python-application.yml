@@ -59,3 +59,9 @@ jobs:
         push: true
         tags: |
           ghcr.io/20anthony/ejercicio:3.0.0
+
+# 9. Levantar y probar la imagen publicada
+    - name: Levantar la imagen Docker publicada
+      run: |
+        docker pull ghcr.io/20anthony/ejercicio:3.0.0
+        docker run --rm ghcr.io/20anthony/ejercicio:3.0.0
